@@ -8,24 +8,30 @@ group:
   title: '通用'
 ---
 
-
 ## Button
 
 Demo:
 
 ```tsx
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Button } from 'dumi-lib';
 
-const { ButtonSize, ButtonType } = Button
+const { ButtonSize, ButtonType } = Button;
 
 export default () => {
-  return <>
-    <Button disabled>测试</Button>
-    <Button btnType='primary'>primary</Button>
-    <Button btnType='link' href='http://www.baidu.com'>Link</Button>
-  </>
+  return (
+    <Fragment>
+      <div>
+        <Button disabled>测试</Button>
+        <Button btnType="primary">primary</Button>
+        <Button btnType="link" href="http://www.baidu.com">
+          Link
+        </Button>
+      </div>
+      <div>
+        <Button></Button>
+      </div>
+    </Fragment>
+  );
 };
 ```
-
-
