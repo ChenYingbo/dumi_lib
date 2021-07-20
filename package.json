@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/raf": "^3.4.0",
     "antd": "^4.11.2",
     "classnames": "^2.2.6",
     "mkdirp": "^1.0.4",

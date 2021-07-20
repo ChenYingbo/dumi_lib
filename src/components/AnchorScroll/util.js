@@ -1,4 +1,4 @@
-export function throttle(fn, delay = 200, threshold = 600) {
+function throttle(fn, delay = 200, threshold = 600) {
   let timer = null; // 定时器
   let last = null; // 上次执行fn时间
   return function(...args) {
@@ -21,14 +21,14 @@ export function throttle(fn, delay = 200, threshold = 600) {
   };
 }
 
-export function getTargetRect(target) {
+function getTargetRect(target) {
   return target !== window
     ? target.getBoundingClientRect()
     : document.documentElement.getBoundingClientRect() ||
         document.body.getBoundingClientRect();
 }
 
-export function scrollTo(target, scrollTop) {
+function scrollTo(target, scrollTop) {
   if (target === window) {
     document.body.scrollTop = scrollTop;
     document.documentElement.scrollTop = scrollTop;
@@ -36,3 +36,8 @@ export function scrollTo(target, scrollTop) {
     target.scrollTop = scrollTop;
   }
 }
+export default {
+  throttle,
+  getTargetRect,
+  scrollTo,
+};
